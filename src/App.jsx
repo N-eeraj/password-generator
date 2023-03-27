@@ -3,13 +3,15 @@ import { useState } from 'react'
 import Header from '@components/Header'
 import Checkbox from '@components/Checkbox'
 import Button from '@components/Button'
+import Range from '@components/Range'
 
 import options from '@/data'
 import { createPassword } from '@/helpers'
 
 const App = () => {
-
     const [requirements, setRequirements] = useState([])
+    const [passwordLength, setPasswordLength] = useState(24)
+    const [password, setPassword] = useState(null)
 
     const handleChange = (checked, value) => {
         if (checked)
@@ -18,10 +20,7 @@ const App = () => {
             setRequirements(requirements => requirements.filter(item => item !== value))
     }
 
-    const handleGeneratePassword = () => {
-        const password = createPassword(requirements)
-        console.log(password)
-    }
+    const handleGeneratePassword = () => setPassword(createPassword(requirements, passwordLength))
 
     return (
         <div className="App">
@@ -40,7 +39,16 @@ const App = () => {
                 }
             </div>
 
+            <Range updateLength={setPasswordLength} />
+
             <Button generatePassword={handleGeneratePassword} />
+
+            {
+                password &&
+                <h2>
+                    {password}
+                </h2>
+            }
 
         </div>
     )
