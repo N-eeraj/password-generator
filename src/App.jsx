@@ -4,6 +4,7 @@ import Header from '@components/Header'
 import Checkbox from '@components/Checkbox'
 import Button from '@components/Button'
 import Range from '@components/Range'
+import Password from '@components/Password'
 
 import options from '@/data'
 import { createPassword } from '@/helpers'
@@ -43,12 +44,7 @@ const App = () => {
 
             <Button generatePassword={handleGeneratePassword} />
 
-            {
-                password &&
-                <h2>
-                    {password}
-                </h2>
-            }
+            {password && <Password password={password} />}
 
         </div>
     )
