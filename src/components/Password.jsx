@@ -1,6 +1,11 @@
 const Password = ({ password }) => {
     const copy = () => {
-        navigator.clipboard.writeText(password)
+        const dummy = document.createElement('textarea')
+        document.body.appendChild(dummy)
+        dummy.value = password
+        dummy.select()
+        document.execCommand('copy')
+        document.body.removeChild(dummy)
         alert('Copied Password!')
     }
 
