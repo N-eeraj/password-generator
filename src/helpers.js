@@ -19,3 +19,13 @@ export const createPassword = (options, length=6) => {
 
     return password
 }
+
+export const copyText = text => {
+    const dummy = document.createElement('textarea')
+    document.body.appendChild(dummy)
+    dummy.value = text
+    dummy.select()
+    document.execCommand('copy')
+    document.body.removeChild(dummy)
+    alert('Copied Password!')
+}

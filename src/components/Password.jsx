@@ -1,13 +1,8 @@
+import { copyText } from '@/helpers'
+
 const Password = ({ password }) => {
-    const copy = () => {
-        const dummy = document.createElement('textarea')
-        document.body.appendChild(dummy)
-        dummy.value = password
-        dummy.select()
-        document.execCommand('copy')
-        document.body.removeChild(dummy)
-        alert('Copied Password!')
-    }
+
+    const copy = () => copyText(password)
 
     return (
         <div>
