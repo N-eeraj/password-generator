@@ -1,0 +1,7 @@
+.range-container {
+    @apply flex flex-col gap-y-1 w-full max-w-xl;
+}
+
+.range {
+    @apply accent-accent;
+}

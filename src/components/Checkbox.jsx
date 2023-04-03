@@ -1,6 +1,8 @@
+import '@styles/checkbox.css'
+
 const Checkbox = ({ id, value, label, changeSelection }) => {
     return (
-        <>
+        <div className='checkbox'>
             <input
                 id={id}
                 type="checkbox"
@@ -10,7 +12,7 @@ const Checkbox = ({ id, value, label, changeSelection }) => {
             <label htmlFor={ id }>
                 {label}
             </label>
-        </>
+        </div>
     )
 }
 

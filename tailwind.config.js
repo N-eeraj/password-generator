@@ -10,8 +10,11 @@ export default {
     },
     extend: {
       colors: {
-        primary: '#111',
-        accent: '#0C5'
+        primary: '#211859',
+        secondary: '#1C3659',
+        text: '#EFD',
+        accent: '#11CA92',
+        glow: '#22DGBA3'
       }
     },
   },

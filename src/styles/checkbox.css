@@ -1,0 +1,3 @@
+.checkbox {
+    @apply flex gap-x-2 text-lg;
+}

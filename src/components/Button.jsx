@@ -1,6 +1,8 @@
+import '@styles/generate-button.css'
+
 const Button = ({ generatePassword }) => {
     return (
-        <button onClick={generatePassword}>
+        <button className='generate-button' onClick={generatePassword}>
             Generate Password
         </button>
     )

@@ -1,16 +1,20 @@
 import { copyText } from '@/helpers'
 
+import '@styles/password.css'
+
 const Password = ({ password }) => {
 
     const copy = () => copyText(password)
 
     return (
-        <div>
-            <h2>
+        <div className='password-container'>
+            <h2 className='password'>
                 {password}
             </h2>
 
-            <button onClick={copy}>
+            <button
+                className='copy-button'
+                onClick={copy}>
                 Copy
             </button>
         </div>

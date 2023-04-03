@@ -27,5 +27,4 @@ export const copyText = text => {
     dummy.select()
     document.execCommand('copy')
     document.body.removeChild(dummy)
-    alert('Copied Password!')
 }
