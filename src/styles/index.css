@@ -1,0 +1,7 @@
+body {
+    @apply w-screen h-screen bg-primary;
+}
+
+.checkbox-container {
+    @apply text-accent;
+}

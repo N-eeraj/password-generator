@@ -9,6 +9,8 @@ import Password from '@components/Password'
 import options from '@/data'
 import { createPassword } from '@/helpers'
 
+import '@styles/index.css'
+
 const App = () => {
     const [requirements, setRequirements] = useState([])
     const [passwordLength, setPasswordLength] = useState(24)
@@ -24,10 +26,10 @@ const App = () => {
     const handleGeneratePassword = () => setPassword(createPassword(requirements, passwordLength))
 
     return (
-        <div className="App">
+        <div className='App'>
             <Header />
 
-            <div className="checkbox-container">
+            <div className='checkbox-container'>
                 {
                     options.map(({id, value, label}) =>
                         <Checkbox
