@@ -1,6 +1,6 @@
 import '@styles/generate-button.css'
 
-const Button = ({ generatePassword }) => {
+const GenerateButton = ({ generatePassword }) => {
     return (
         <button className='generate-button' onClick={generatePassword}>
             Generate Password
@@ -8,4 +8,4 @@ const Button = ({ generatePassword }) => {
     )
 }
 
-export default Button
+export default GenerateButton

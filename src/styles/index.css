@@ -5,3 +5,11 @@
 .checkbox-container {
     @apply flex flex-col md:flex-row gap-y-2 gap-x-10 accent-accent;
 }
+
+.App button {
+    @apply border-accent font-bold;
+}
+
+.App button:hover {
+    @apply bg-accent text-primary font-black;
+}

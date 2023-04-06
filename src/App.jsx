@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import Header from '@components/Header'
 import Checkbox from '@components/Checkbox'
-import Button from '@components/Button'
+import GenerateButton from '@components/GenerateButton'
 import Range from '@components/Range'
 import Password from '@components/Password'
 
@@ -44,7 +44,7 @@ const App = () => {
 
             <Range updateLength={setPasswordLength} />
 
-            <Button generatePassword={handleGeneratePassword} />
+            <GenerateButton generatePassword={handleGeneratePassword} />
 
             {password && <Password password={password} />}
 
